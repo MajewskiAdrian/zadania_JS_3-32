@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> Majewski 2P </title>
+<center>
+<script language="JavaScript">
+
+document.write("Wykonał: Adrian Majewski mój numer w dzienniku to 18, czyli<br>mam układ [(18 mod 4 = 2)] układ 2".fontcolor("red").fontsize(6).bold()+"<br><br>");
+
+function WinOpen_majewski_1()
+{
+window.open("grafika3.html","okienko1","toolbar=no,directories=no,menubar=no,height=250,width=260,top=20,left=50");
+}
+function WinOpen_majewski_2()
+{
+window.open("grafika1.html","okienko2","toolbar=no,directories=no,menubar=no,height=250,width=260,top=20,left=1050");
+}
+function WinOpen_majewski_3()
+{
+window.open("grafika2.html","okienko3","toolbar=no,directories=no,menubar=no,height=250,width=260,top=800,left=50");
+}
+function WinOpen_majewski_4()
+{
+window.open("grafika4.html","okienko4","toolbar=no,directories=no,menubar=no,height=250,width=260,top=800,left=1050");
+}
+
+function okno_zamknij_majewski()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" name="grafika1" value="grafika1" onclick="WinOpen_majewski_1(' ')">
+<input type="button" name="grafika2" value="grafika2" onclick="WinOpen_majewski_2(' ')">
+<input type="button" name="grafika3" value="grafika3" onclick="WinOpen_majewski_3(' ')">
+<input type="button" name="grafika4" value="grafika4" onclick="WinOpen_majewski_4(' ')">
+<br><br><br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_majewski()"/>
+</form>
+</body>
+</html>
