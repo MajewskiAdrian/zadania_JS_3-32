@@ -1,0 +1,38 @@
+<textarea name="Zadanie 16 Majewski - KOD" cols="220" rows="30" readonly>
+<html>
+<head>
+<meta charset="UTF-8">	
+<title> Zadanie 16 Majewski </title>
+</head>
+<body>
+<div style="color: green; font-size: 36px;">
+ <script language="JavaScript">
+ 
+var a_maj=prompt("Podaj pierwszą licbę A=","");
+var b_maj=prompt("Podaj drugą licbę B=","");
+
+ var a=parseFloat(a_maj);
+ var b=parseFloat(b_maj);
+
+ var pierwsze;
+ var drugie;
+ var trzecie;
+ 
+ pierwsze = a * a * a;
+ drugie = 3*((a)*a)*(b);
+ trzecie = 3*(a)*((b)*b);
+ czwarte = b*b*b;
+ 
+ suma = pierwsze + drugie + trzecie + czwarte;
+
+ document.write("Wczytane liczby: "+"A = " +a+ " 		 B = " + b + "<br>");
+
+ document.write("(" + a + " + " + b + ")^3 + 3*((" + a + ")^2) * (" + b + ") + 3 * (" + a + ")*((" + b + ")^2) + " + b + "^3 = " + pierwsze + " + " + drugie + " + " + trzecie + " + " + czwarte + " = " + suma);
+
+
+ </script>
+</div>
+</body>
+</html>
+
+</textarea>
