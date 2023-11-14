@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+
+function AB_maj(){
+
+    var xa_maj = parseFloat(document.getElementById('xa_maj').value);
+    var ya_maj = parseFloat(document.getElementById('ya_maj').value);
+    var xb_maj = parseFloat(document.getElementById('xb_maj').value);
+    var yb_maj = parseFloat(document.getElementById('yb_maj').value);
+    
+    var potega1 = Math.pow(xa_maj - xb_maj, 2);
+    var potega2 = Math.pow(ya_maj - yb_maj, 2);
+    
+    var odcinek = Math.sqrt(potega1 + potega2);
+    
+    document.getElementById("wynik").innerHTML = "|AB| = " + odcinek;
+}
+
+function BC_maj(){
+
+    var xb_maj = parseFloat(document.getElementById('xb_maj').value);
+    var yb_maj = parseFloat(document.getElementById('yb_maj').value);
+    var xc_maj = parseFloat(document.getElementById('xc_maj').value);
+    var yc_maj = parseFloat(document.getElementById('yc_maj').value);
+    
+    var potega1 = Math.pow(xb_maj - xc_maj, 2);
+    var potega2 = Math.pow(yb_maj - yc_maj, 2);
+    
+    var odcinek = Math.sqrt(potega1 + potega2);
+    
+    document.getElementById("wynik").innerHTML = "|BC| = " + odcinek;
+}
+
+function AC_maj(){
+
+    var xa_maj = parseFloat(document.getElementById('xa_maj').value);
+    var ya_maj = parseFloat(document.getElementById('ya_maj').value);
+    var xc_maj = parseFloat(document.getElementById('xc_maj').value);
+    var yc_maj = parseFloat(document.getElementById('yc_maj').value);
+    
+    var potega1 = Math.pow(xa_maj - xc_maj, 2);
+    var potega2 = Math.pow(ya_maj - yc_maj, 2);
+    
+    var odcinek = Math.sqrt(potega1 + potega2);
+    
+    document.getElementById("wynik").innerHTML = "|AC| = " + odcinek;
+}
+</script>
+
+	AX = <input type="text" id="xa_maj" value=""><br><br>
+	AY = <input type text="text" id="ya_maj" value=""><br><br>
+	
+	BX = <input type="text" id="xb_maj" value=""><br><br>
+	BY = <input type="text" id="yb_maj" value=""><br><br>
+	
+	CX = <input type="text" id="xc_maj" value=""><br><br>
+	CY = <input type="text" id="yc_maj" value=""><br><br><br>
+	
+	<input type="button" name="AB" value="|AB|" onclick="AB_maj()"><br><br>
+	<input type="button" name="BC" value="|BC|" onclick="BC_maj()"><br><br>
+	<input type="button" name="AC" value="|AC|" onclick="AC_maj()"><br><br>
+	
+	<div style="color:red; font-size:50px;" id="wynik"></div>
+</body>
+</html>

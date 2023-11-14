@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+
+function pole_majewski(){
+
+    var a_maj = parseFloat(document.getElementById('a_dana_maj').value);
+    var b_maj = parseFloat(document.getElementById('b_dana_maj').value);
+    
+    var pole = (a_maj * b_maj);
+    
+    document.getElementById("wynik").innerHTML = "Pole = " + pole + " cm^2";
+}
+
+function obwod_majewki(){
+
+    var a_maj = parseFloat(document.getElementById('a_dana_maj').value);
+    var b_maj = parseFloat(document.getElementById('b_dana_maj').value);
+    
+    var obwod = (a_maj * 2) + (b_maj * 2);
+    
+    document.getElementById("wynik").innerHTML = "Obwód = " + obwod + " cm";
+}
+
+</script>
+
+	A = <input type="text"  id="a_dana_maj" value=""><br><br>
+	B = <input type text="text" id="b_dana_maj" value=""><br><br>
+
+	
+	<input type="button" name="wyprowadz_pole_maj" value=" Pole " onclick="pole_majewski()"><br><br>
+	<input type="button" name="wyprowadz_obwod_maj" value=" Obwod " onclick="obwod_majewki()"><br><br>
+
+	
+	<div style="color:red; font-size:50px;" id="wynik"></div>
+</body>
+</html>

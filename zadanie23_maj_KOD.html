@@ -1,0 +1,57 @@
+<textarea name="Zadanie 23 Majewski - KOD" cols="220" rows="30" readonly>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+
+function drabina_majewski() {
+    var d_maj = parseFloat(document.getElementById('d_dana_maj').value);
+    var x_maj = parseFloat(document.getElementById('x_dana_maj').value);
+    
+    var potegowanie = (d_maj * d_maj) + (x_maj * x_maj);
+
+    var drabina = Math.sqrt(potegowanie);
+
+    document.getElementById("wynik_maj").value = drabina.toFixed(2);
+}
+
+function alfa_majewki() {
+    var d_maj = parseFloat(document.getElementById('d_dana_maj').value);
+    var x_maj = parseFloat(document.getElementById('x_dana_maj').value);
+    
+    var tgalfa = d_maj / x_maj;
+
+    var radiant = Math.atan(tgalfa);
+    var stopnie = (radiant * 180) / Math.PI;
+
+    document.getElementById("alfa_maj").value = stopnie.toFixed(2);
+}
+
+</script>
+
+Obliczanie odległości od drabiny i kąta
+<br><br>
+
+<form name="form" onsubmit="drabina_majewski(); alfa_majewki(); return false">
+
+Podaj d = <input type="text" id="d_dana_maj" value="" size="5"> 
+Podaj x = <input type="text" id="x_dana_maj" value="" size="5">
+
+<br><br>
+
+<input type="submit" value="oblicz">
+
+<br><br>
+
+Drabina = <input id="wynik_maj" size="5"> 
+
+Alfa = <input id="alfa_maj" size="5"> 
+
+</form>
+</body>
+</html>
+
+</textarea>
