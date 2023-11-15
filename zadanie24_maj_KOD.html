@@ -1,4 +1,4 @@
-<textarea name="Zadanie  Majewski - KOD" cols="220" rows="30" readonly>
+<textarea name="Zadanie 24 Majewski - KOD" cols="220" rows="40" readonly>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,25 +6,34 @@
 </head>
 <body bgcolor="gray">
 
-<div style="color: blue; font-size: 30px;">
+<div style="color: blue; font-size: 33px;">
   <script type="text/javascript">
-    var x1_maj = parseFloat(prompt("x1 =", ""))
-    var x2_maj = parseFloat(prompt("x2 =", ""))
+    var x1_maj = parseFloat(prompt("Podaj x1 =", ""))
+    var x2_maj = parseFloat(prompt("Podaj x2 =", ""))
 
-    radiant = (x1_maj * Math.PI) / 180
-    y1_maj = 3 * Math.pow(x1_maj, 6 / 8)
-    y2_maj = 2 * Math.cos(radiant) + 3 * Math.sin(radiant)
-    y3_maj = Math.pow(Math.pow(x1_maj, 5) + 2 * Math.pow(x2_maj, 4), 1 / 3) * Math.abs(x1_maj - x2_maj)
+    var radiant = (x1_maj * Math.PI) / 180
+	
+    var y1_maj = 3 * Math.pow(x1_maj, 6 / 8)
+	
+    var y2_maj = 2 * Math.cos(radiant) + 3 * Math.sin(radiant)
+	
+    var y3_maj = Math.pow(Math.pow(x1_maj, 5) + 2 * Math.pow(x2_maj, 4), 1 / 3) * Math.abs(x1_maj - x2_maj)
+
+
 
     document.write("x1=" + x1_maj + "&nbsp;&nbsp;&nbsp;&nbsp;x2=" + x2_maj + "<br>")
     document.write("x1=" + x1_maj + "&nbsp;&nbsp;&nbsp;&nbsp;x1=" + radiant.toFixed(2) + "<br>")
+	
     document.write("y1=" + y1_maj.toFixed(2) + "<br>")
+	
     document.write("y2=" + y2_maj.toFixed(2) + "<br>")
+	
     document.write("y3=" + y3_maj.toFixed(2))
   </script>
 </div>
 
 </body>
 </html>
+
 
 </textarea>

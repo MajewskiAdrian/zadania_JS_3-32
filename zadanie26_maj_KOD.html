@@ -1,0 +1,58 @@
+<textarea name="Zadanie 26 Majewski - KOD" cols="220" rows="60" readonly>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div style="color: blue; font-size: 30px;">
+    <script type="text/javascript">
+
+	function Pow_majewski() {
+	
+		var gornaPodstawa = parseFloat(document.getElementById('gornaPodstawa').value)
+        var dolnaPodstawa = parseFloat(document.getElementById('dolnaPodstawa').value)
+        var wysokosc = parseFloat(document.getElementById('wysokosc').value)
+
+
+        var pole = (gornaPodstawa + dolnaPodstawa) * wysokosc / 2
+
+        document.getElementById("poleTrapezu").value = pole.toFixed(2)
+    }
+
+
+    function Obw_majewski() {
+        var gornaPodstawa = parseFloat(document.getElementById('gornaPodstawa').value)
+        var dolnaPodstawa = parseFloat(document.getElementById('dolnaPodstawa').value)
+        var wysokosc = parseFloat(document.getElementById('wysokosc').value)
+
+        var d = Math.abs(gornaPodstawa - dolnaPodstawa)
+
+        var ramie = Math.sqrt(wysokosc * wysokosc + (d / 2) * (d / 2))
+
+        var obwod = gornaPodstawa + dolnaPodstawa + 2 * ramie
+
+        document.getElementById("obwodTrapezu").value = obwod.toFixed(2)
+    }
+    </script>
+
+    <form name="form" onsubmit="Pow_majewski(); Obw_majewski(); return false">
+
+        Górna podstawa: <input type="text" id="gornaPodstawa" value="" size="5"><br>
+        Dolna podstawa: <input type="text" id="dolnaPodstawa" value="" size="5"><br>
+        Wysokość: <input type="text" id="wysokosc" size="5"><br><br>
+
+        <input type="submit" value="oblicz">
+
+        <br><br>
+        Pole trapezu = <input id="poleTrapezu" size="5"> <sup>2</sup>
+        <br>
+        Obwód trapezu = <input id="obwodTrapezu" size="5">
+		
+    </form>
+</body>
+</html>
+
+
+</textarea>

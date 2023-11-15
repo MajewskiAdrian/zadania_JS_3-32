@@ -1,21 +1,15 @@
-<textarea name="Zadanie  Majewski - KOD" cols="220" rows="30" readonly>
+<textarea name="Zadanie 25 Majewski - KOD" cols="220" rows="40" readonly>
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="UTF-8">
-  <style>
-    body {
-      color: blue;
-      font-size: 40px;
-    }
-
-  </style>
 </head>
-
-<body bgcolor="lightgray">
+<body>
+<div style="color: blue; font-size: 40px;">
   <script type="text/javascript">
-    // Autor: Adrian Majewski
+	// Autor: Adrian Majewski
+
 
     var N0 = parseFloat(prompt("Podaj ilość początkową atomów (No) [sztuk]:"));
     var t = parseFloat(prompt("Podaj czas (t) [lat]:"));
@@ -27,8 +21,9 @@
 
     var N = N0 * Math.pow(Math.E, -lambda * t);
 
+
     document.write("N0 = " + N0.toFixed(2) + " [sztuk]<br>");
-    document.write("t = " + t.toFixed(2) + " [lat]<br>");
+    document.write("t = " + t + " [lat]<br>");
     document.write("T1/2 = " + T_pol + " [lat]<br>");
     document.write("Lambda = " + lambda.toFixed(7) + " [1/rok]<br>");
     document.write("N = " + N.toFixed(7) + " [sztuk]<br>");
