@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function dom(kondygnacje_k, powierzchnia_k, lazienki_k, sypialnie_k) {
+                this.kondygnacje = kondygnacje_k;
+                this.powierzchnia = powierzchnia_k;
+                this.lazienki = lazienki_k;
+                this.sypialnie = sypialnie_k; 
+            }
+
+            dom.prototype.wypisz_majewski = function () {
+                alert("Liczba pięter: " + this.kondygnacje + "    Powierzchnia: " + this.powierzchnia + "^2   Liczba łazienek: " + this.lazienki + "    Liczba sypialni: " + this.sypialnie);
+            };
+
+            var dom1 = new dom("2", "120m", "2", "4");
+            var dom2 = new dom("3", "160m", "3", "6");
+			
+			dom1.orientacja = "północna";
+			dom2.orientacja = "północno-wschodnia";
+			
+			dom.prototype.pokaz_majewski = function () {
+            alert("Orinetacja: " + this.orientacja);
+            };
+			
+			dom1.wypisz_majewski(); 
+			dom1.pokaz_majewski();
+			
+            dom2.wypisz_majewski();
+			dom2.pokaz_majewski();
+			
+
+            document.write("<b>Dostęp do właściwości</b>" + "<br>");
+
+            document.write("<u>Dom pierwszy</u>: <br>" + "Liczba kondygnacji: " + dom1.kondygnacje + " <br> Powierzchnia: " + dom1.powierzchnia + "<sup>2</sup>" + " <br> Liczba łazienek: " + dom1.lazienki + " <br> Liczba sypialni: " + dom1.sypialnie + "<br><br>");
+
+            document.write("<u>Dom drugi</u>: <br>" + "Liczba kondygnacji: " + dom2.kondygnacje + " <br> Powierzchnia: " + dom2.powierzchnia + "<sup>2</sup>" + " <br> Liczba łazienek: " + dom2.lazienki + " <br> Liczba sypialni: " + dom2.sypialnie + "<br><br>");
+        
+		</script>
+    </head>
+    <body>
+    </body>
+</html>

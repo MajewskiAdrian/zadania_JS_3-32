@@ -1,0 +1,30 @@
+<textarea name="Zadanie 31 Majewski - KOD" cols="220" rows="30" readonly>
+
+<!DOCTYPE html>
+<head>
+    <title>Zadanie 31 Majewski</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var dom = {  
+            kondygnacje: "1",
+            powierzchnia: "120",
+            lazienki: "2",
+            dom_pokaz_majewski: function () {
+
+                document.write("Liczba kondygnacji: " + this.kondygnacje + "<br>" + 
+                "Powierzchnia: ", this.powierzchnia + "m<sup>2</sup>" + "<br>" +
+                "Liczba łazienek: ", this.lazienki + "<br>")
+            }
+        }
+        
+        dom.dom_pokaz_majewski();
+        dom.orientacja= "północna";
+        dom.wypisz=function() {alert("Orientacja: " + this.orientacja)}
+        dom.wypisz();
+    </script>
+</body>
+</html>
+
+
+</textarea>
